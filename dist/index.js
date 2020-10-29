@@ -355,7 +355,7 @@ var GraphQLServer = /** @class */ (function () {
             combinedServer.listen(port, _this.options.host, function () {
                 callbackFunc(__assign({}, _this.options, { port: combinedServer.address().port }));
                 resolve(combinedServer);
-            });
+            }).setTimeout(1000 * 60 * 10);
         });
     };
     GraphQLServer.prototype.createSubscriptionServer = function (combinedServer) {
