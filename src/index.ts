@@ -397,7 +397,7 @@ export class GraphQLServer {
           port: combinedServer.address().port,
         })
         resolve(combinedServer)
-      }).setTimeout(1000*60*10)
+      }).setTimeout(this.options.timeout || 1000*60*2)
     })
   }
 

@@ -86,6 +86,7 @@ export interface Options extends ApolloServerOptions {
   deduplicator?: boolean
   getEndpoint?: string | boolean
   bodyParserOptions?: BodyParserJSONOptions
+  timeout?: number
 }
 
 export interface OptionsWithHttps extends Options {
